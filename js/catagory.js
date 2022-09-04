@@ -115,4 +115,3 @@ const showCatagories = (detail) => {
 }
 categoriesNews('08');
 catagoryLoadData();
-// dklsjfddddddddddddd
