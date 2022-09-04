@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News section</title>
+  <script src="https://kit.fontawesome.com/bcdbc37bd8.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <!-- main navbar -->
+    <nav class="navbar bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light p-1"><span class="p-3 bg-info rounded-circle text-dark fs-5 w-5">Global</span>
+          <span>News</span></a>
+        <form class="d-flex" role="search">
+          <a class="navbar-brand   text-light ">
+            <span class="pe-3">News</span> <span data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+              id="blog">Blog</span>
+          </a>
+          <a class="navbar-brand " href="#">
+            <img src="img/img.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+          </a>
+        </form>
+      </div>
+    </nav>
+    <hr>
+    <!-- All catagories section -->
+    <section>
+      <ul class="container" id="ul-field">
+        <span class="btn">Home</span>
+      </ul>
+    </section>
+  </header>
+  <main class="container">
+    <!-- item section start -->
+    <section>
+      <ul><span class="fs-4"><span id="numberOfNews"></span> items found for category <span
+            id="catagori-container"></span></span></ul>
+      <div class="container ps-4">
+        <div class="row justify-content-between">
+          <div class="col-sm-12 col-lg-4 d-flex">
+            <h5>Sort By View: </h5>
+            <select class="ms-3 form-select w-50" value="Default" aria-label="Default select example">
+              <option selected>Default</option>
+              <option value="1">Low to High</option>
+              <option value="3">High to Low</option>
+            </select>
+          </div>
+          <div class="col-sm-12 col-lg-4 text-end">
+            <button type="button" class="btn btn-danger">Today's Pick</button>
+            <button type="button" class="btn btn-light">Trending</button>
+          </div>
+        </div>
+        <!-- item is here -->
+        <section>
+          <div id="book-container" class="card mt-4 mb-3">
+          </div>
+          <!-- Modal start -->
+          <div id="modalDetails">
+          </div>
+          <div class="modal fade" id="detailsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div id="modalBody" class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- blog section -->
+        <section>
+          <div id="blog-container">
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Blog</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            what is the difference between let and const in javascript ?
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                          aria-labelledby="panelsStayOpen-headingOne">
+                          <div class="accordion-body">
+                            var variables can be updated and re-declared within its scope; let variables can be updated
+                            but not re-declared; const variables can neither be updated nor re-declared. They are all
+                            hoisted to the top of their scope. But while var variables are initialized with undefined ,
+                            let and const variables are not initialized.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            what is the difference between arrow function and normal function?
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                          aria-labelledby="panelsStayOpen-headingTwo">
+                          <div class="accordion-body">
+                            Arrow function — also called fat arrow function— is a new feature introduced in ES6 that is
+                            a more concise syntax for writing function expressions. While both regular JavaScript
+                            functions and arrow functions work in a similar manner, there are certain differences
+                            between them.
+                            Unlike regular functions, arrow functions do not have their own this. The value of this
+                            inside an arrow function remains the same throughout the lifecycle of the function and is
+                            always bound to the value of this in the closest non-arrow parent function.
+                            Regular functions created using function declarations or expressions are constructible and
+                            callable. Since regular functions are constructible, they can be called using the new
+                            keyword.
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            what is the difference between map, filter vs for vs forEach and reduce ?</button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                          aria-labelledby="panelsStayOpen-headingThree">
+                          <div class="accordion-body">
+                            .forEach:-->
+
+                            .forEach(), is used to execute the same code on every element in an array but does not
+                            change the array and it returns undefined.
+
+                            <br>
+                            .map():-->
+                            .map() executes the same code on every element in an array and returns a new array with the
+                            updated elements.
+
+                            <br>
+                            .filter():-->
+                            .filter() checks every element in an array to see if it meets a certain criteria and returns
+                            a new array with the elements that return truthy for the criteria.
+                            <br>
+                            reduce():-->
+                            The reduce() method executes a user-supplied "reducer" callback function on each element of
+                            the array, in order, passing in the return value from the calculation on the preceding
+                            element. The final result of running the reducer across all elements of the array is a
+                            single value.
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            What are template strings used for?
+
+                          </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                          aria-labelledby="panelsStayOpen-headingThree">
+                          <div class="accordion-body">
+                            Template strings are a powerful feature of modern JavaScript released in ES6. It lets us
+                            insert/interpolate variables and expressions into strings without needing to concatenate
+                            like in older versions of JavaScript. It allows us to create strings that are complex and
+                            contain dynamic elements.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            What is API Testing? </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                          aria-labelledby="panelsStayOpen-headingThree">
+                          <div class="accordion-body">
+                            By testing the API, you are examining the security, functionality, reliability, and
+                            performance of your system. Instead of testing with standard inputs and outputs, API testing
+                            has the ability to get output directly from the programming interface and take note of how
+                            it's responding. Instead of the simplicity of UI tests that focus more on the look and feel
+                            of applications, API testing has a deeper, more thorough understanding of how the
+                            architecture is built and works.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- cataogry -->
+        <section id="news-details">
+        </section>
+
+        <section>
+          <!-- massage section start -->
+          <div id="no-found-massage" class="mt-4 d-none">
+            <h3 class="text-success text-center"> News Not Found </h3>
+          </div>
+          <!-- spinner section start -->
+          <div id="loader" class="d-none text-center">
+            <div class="spinner-grow text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow text-secondary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="spinner-grow text-success" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          <div id="error-massage"></div>
+        </section>
+
+
+        <script src="js/catagory.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>
