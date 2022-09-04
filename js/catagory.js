@@ -3,7 +3,9 @@ const catagoryLoadData = async () => {
     try {
         const res = await fetch(mianUrl);
         const data = await res.json();
-        displayCatagoryData(data.data.news_category.sort());
+        displayCatagoryData(data.data.news_category.sort(function (a, b) {
+            return b.total_view - a.total_view;
+        }));
     } catch {
         console.log('There are an error . ');
     }
@@ -48,13 +50,13 @@ const categoriesNews = async (post) => {
 // display all catagories 
 const showCatagories = (detail) => {
     toggleSpinner(true);
-    console.log(detail);
+    // console.log(detail);
     const catagoriesLength = detail.length;
     const number = document.getElementById('numberOfNews')
     number.innerText = catagoriesLength;
 
     const notFoundMassage = document.getElementById('no-found-massage');
-//   show the length of details
+    //   show the length of details
     if (detail.length === 0) {
         notFoundMassage.classList.remove('d-none');
     } else {
