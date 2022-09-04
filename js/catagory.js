@@ -54,6 +54,7 @@ const showCatagories = (detail) => {
     number.innerText = catagoriesLength;
 
     const notFoundMassage = document.getElementById('no-found-massage');
+//   show the length of details
     if (detail.length === 0) {
         notFoundMassage.classList.remove('d-none');
     } else {
