@@ -8,7 +8,7 @@ const catagoryLoadData = async () => {
         console.log('There are an error . ');
     }
 }
-
+// Display all data from AIP
 const displayCatagoryData = data => {
     const newField = document.getElementById('ul-field');
     data.forEach((catagories) => {
@@ -19,7 +19,7 @@ const displayCatagoryData = data => {
         newField.appendChild(li);
     });
 }
-
+// Spinner is start here
 
 const toggleSpinner = isLoading => {
     const loaderSection = document.getElementById('loader');
@@ -30,7 +30,7 @@ const toggleSpinner = isLoading => {
     }
 }
 
-
+// category ways news is start here
 const categoriesNews = async (post) => {
     try {
         const url = (`https://openapi.programming-hero.com/api/news/category/${post}`);
@@ -45,9 +45,8 @@ const categoriesNews = async (post) => {
     }
 };
 
-
+// display all catagories 
 const showCatagories = (detail) => {
-
     toggleSpinner(true);
     console.log(detail);
     const catagoriesLength = detail.length;
@@ -102,8 +101,7 @@ const showCatagories = (detail) => {
         newsDetails.appendChild(div);
         toggleSpinner(false)
 
-
-
+        // create a modal to details in here.
         const showModalDetails = document.getElementById('modalBody');
         showModalDetails.innerHTML = `
         <h4>Title ${details.title}</h4>
@@ -113,9 +111,8 @@ const showCatagories = (detail) => {
         <h4>Badge ${details.rating.badge}</h4>
         <h4>Published Date${details.author.published_date}</h4>
 `;
-
     });
 }
 categoriesNews('08');
 catagoryLoadData();
-
+// dklsjfddddddddddddd
