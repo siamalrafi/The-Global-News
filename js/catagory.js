@@ -114,5 +114,6 @@ const showCatagories = (detail) => {
 `;
     });
 }
+// show some data in dashboard
 categoriesNews('08');
 catagoryLoadData();
