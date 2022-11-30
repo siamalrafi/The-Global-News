@@ -7,6 +7,12 @@ Live Website : https://thunderous-frangollo-714c6c.netlify.app/
 
 ## *** Below are some of the features that use this website 
 
+* This is make sure you have the right news.
+* Here i use HTML,CSS and JavaScript . 
+* You can see a category of news by clicking on the selected category.
+* There are several extra features like sorting and details button.
+* 
+* 
 
 
 
