@@ -13,11 +13,3 @@ Live Website : https://thunderous-frangollo-714c6c.netlify.app/
 * There are several extra features like sorting and details Icon to see all details about this news.
 * Here are using loading spinner for better to users experience.
 * Finally, you can see the latest news of the world and learn.
-
-
-
-
-
-
-
-
