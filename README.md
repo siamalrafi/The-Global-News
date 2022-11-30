@@ -10,9 +10,9 @@ Live Website : https://thunderous-frangollo-714c6c.netlify.app/
 * This is make sure you have the right news.
 * Here i use HTML,CSS and JavaScript . 
 * You can see a category of news by clicking on the selected category.
-* There are several extra features like sorting and details button.
-* 
-* 
+* There are several extra features like sorting and details Icon to see all details about this news.
+* Here are using loading spinner for better to users experience.
+* Finally, you can see the latest news of the world and learn.
 
 
 
